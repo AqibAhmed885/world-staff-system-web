@@ -27,42 +27,42 @@ const Footer = () => {
                             </Link>
                         </div>
                         <div className="flex space-x-4">
-                            <FooterSocialLink href="https://www.facebook.com/worldstaffsystem/" icon={<FaFacebookF className='text-[#0e87c4]'/>} />
+                            <FooterSocialLink href="https://www.facebook.com/worldstaffsystem/" icon={<FaFacebookF className='text-[#0e87c4]' />} />
                             <FooterSocialLink href="#" icon={<FaLinkedinIn />} />
                             <FooterSocialLink href="#" icon={<FaInstagram />} />
-                            <FooterSocialLink href="https://twitter.com/staff_system?s=08" icon={<FaTwitter className='text-[#0e87c4]'/>} />
+                            <FooterSocialLink href="https://twitter.com/staff_system?s=08" icon={<FaTwitter className='text-[#0e87c4]' />} />
                         </div>
                     </div>
                     <FooterSection
                         title="Japan Office"
                         items={[
                             { icon: <MdPhoneIphone className='text-[#0e87c4]' />, text: "+81 - 480377009", link: "tel:+81480377009" },
-                            { icon: <MdPhoneEnabled className='text-[#0e87c4]'/>, text: "+92 - 321 - 7777103 / +81 - 9088427103", link: "tel:+923217777103" },
-                            { icon: <MdMailOutline className='text-[#0e87c4]'/>, text: "info@worldstaffsystem.com", link: "mailto:info@worldstaffsystem.com" },
-                            { icon: <MdPrint  className='text-[#0e87c4]'/>, text: "+81 - 480377099", link: "fax:+81480377099" },
+                            { icon: <MdPhoneEnabled className='text-[#0e87c4]' />, text: "+92 - 321 - 7777103 / +81 - 9088427103", link: "tel:+923217777103" },
+                            { icon: <MdMailOutline className='text-[#0e87c4]' />, text: "info@worldstaffsystem.com", link: "mailto:info@worldstaffsystem.com" },
+                            { icon: <MdPrint className='text-[#0e87c4]' />, text: "+81 - 480377099", link: "fax:+81480377099" },
                             { icon: <MdLocationOn />, text: "547 - 1 Shimohayami, Kuki City, Saitama 346 - 0022", link: "https://www.google.com/maps/place/Shimohayami,+Kuki,+Saitama+346-0022,+Japan/" }
                         ]}
                     />
                     <FooterSection
                         title="Pakistan Office"
                         items={[
-                            { icon: <MdPhoneIphone  className='text-[#0e87c4]'/>, text: "+92 - 312 - 7777103", link: "tel:+923127777103" },
-                            { icon: <MdPhoneEnabled className='text-[#0e87c4]'/>, text: "048 - 3258091", link: "tel:0483258091" },
-                            { icon: <MdMailOutline className='text-[#0e87c4]'/>, text: "info@worldstaffsystem.com", link: "mailto:info@worldstaffsystem.com" },
-                            { icon: <MdLocationOn className='text-[#0e87c4]'/>, text: "211 - A Satellite Town, Near Tayab Hospital, Sargodha Pakistan", link: "https://www.google.com/maps/place/Tayyab+Hospital/" }
+                            { icon: <MdPhoneIphone className='text-[#0e87c4]' />, text: "+92 - 312 - 7777103", link: "tel:+923127777103" },
+                            { icon: <MdPhoneEnabled className='text-[#0e87c4]' />, text: "048 - 3258091", link: "tel:0483258091" },
+                            { icon: <MdMailOutline className='text-[#0e87c4]' />, text: "info@worldstaffsystem.com", link: "mailto:info@worldstaffsystem.com" },
+                            { icon: <MdLocationOn className='text-[#0e87c4]' />, text: "211 - A Satellite Town, Near Tayab Hospital, Sargodha Pakistan", link: "https://www.google.com/maps/place/Tayyab+Hospital/" }
                         ]}
                     />
                     <FooterServices />
                 </div>
-                
+
             </div>
             <div className="mt-8 bg-[#0e87c4]">
-                    <p className="text-center mb-2">&copy; {Year} All rights reserved by worldstaffsystem.com.</p>
-                    <p className="text-center">Made with Love by <a href="#">Light House Development</a></p>
-                </div>
+                <p className="text-center mb-2">&copy; {Year} All rights reserved by worldstaffsystem.com.</p>
+                <p className="text-center">Made with Love by <a href="#">Light House Development</a></p>
+            </div>
         </footer>
     );
-    
+
 };
 
 const FooterSocialLink = ({ href, icon }) => (
@@ -71,8 +71,8 @@ const FooterSocialLink = ({ href, icon }) => (
     </a>
 );
 FooterSocialLink.propTypes = {
-  href: PropTypes.string.isRequired,
-  icon: PropTypes.element.isRequired, // Assuming icon is a React element (e.g., <Icon />)
+    href: PropTypes.string.isRequired,
+    icon: PropTypes.element.isRequired, // Assuming icon is a React element (e.g., <Icon />)
 };
 
 const FooterSection = ({ title, items }) => (
@@ -82,8 +82,8 @@ const FooterSection = ({ title, items }) => (
             <ul className="flex flex-col space-y-2">
                 {items.map((item, index) => (
                     <li key={index} className="flex items-center">
-                      <a href="" className='text-[#0e87c4]'>{item.icon}</a>
-                        
+                        <a href="" className='text-[#0e87c4]'>{item.icon}</a>
+
                         <a href={item.link} className="hover:underline ml-2">{item.text}</a>
                     </li>
                 ))}
@@ -115,12 +115,12 @@ const FooterServices = () => (
 );
 
 FooterSection.propTypes = {
-  title: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.shape({
-      icon: PropTypes.element, // Assuming icon is a React element (e.g., <Icon />)
-      link: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-  })).isRequired,
+    title: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(PropTypes.shape({
+        icon: PropTypes.element, // Assuming icon is a React element (e.g., <Icon />)
+        link: PropTypes.string.isRequired,
+        text: PropTypes.string.isRequired,
+    })).isRequired,
 };
 
 export default Footer;
